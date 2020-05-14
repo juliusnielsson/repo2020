@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header'); -%>
+<body>
+<%- include('layouts/navbar'); -%>
+<header class="masthead" style="background-image: url('img/img4')">
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    User profile
+                    <h1><%= user.username %></h1>
+                    <hr>
+                    <h1>Assigned teams:</h1>
+                    <% for (var i = 0; i < sportsteamuser.length; i++) { %>
+                    <%= sportsteamuser[i].name %>
+                    <hr>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<%- include('layouts/scripts'); -%>
+</body>
+</html>

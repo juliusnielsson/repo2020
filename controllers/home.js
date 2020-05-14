@@ -1,10 +1,10 @@
-const BlogPost = require('../models/BlogPost.js')
+const SportsTeam = require('../models/SportsTeam.js')
 
 module.exports = async (req, res) =>{
-    const blogposts = await
-        BlogPost.find({}).populate('userid');
-    console.log(req.session)
-    res.render('index',{
-        blogposts
+    const sportsteams = await SportsTeam.find({}).populate('userid'); //alle dokumenter i SporsTeam collection bliver fundet
+
+    console.log(req.session)       
+    res.render('index',{ //Derefter bliver alle dokumenterne renderet på 'index' siden
+        sportsteams
     });
 }
